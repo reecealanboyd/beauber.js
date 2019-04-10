@@ -2,8 +2,7 @@
   "name": "beauber.js",
   "version": "1.0.0",
   "description": "A JavaScript development environment with sensible configurations which when used may result in increased automation and developer happiness",
-  "scripts": {
-  },
+  "scripts": {},
   "author": "Reece Boyd",
   "license": "MIT",
   "dependencies": {
