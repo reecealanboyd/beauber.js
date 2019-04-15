@@ -21,3 +21,5 @@ This project uses [Webpack](https://webpack.js.org/) for bundling. You can view 
 
 ### Linting
 This project enforces consistency and avoids mistakes via [ESLint](https://eslint.org/). You can view the configuration for ESLint in this project via [.eslintrc.json](https://github.com/reecealanboyd/beauber.js/blob/master/.eslintrc.json). Linting is run in parallel with `npm start` and it is configured to watch for changes to any files.
+
+### Testing and Continuous Integration
