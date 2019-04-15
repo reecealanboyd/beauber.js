@@ -4,10 +4,12 @@
   "description": "A JavaScript development environment with sensible configurations which when used may result in increased automation and developer happiness",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
-    "start": "npm-run-all --parallel open:src -s",
+    "start": "npm-run-all --parallel open:src lint:watch",
     "open:src": "babel-node buildScripts/srcServer.js",
     "localtunnel": "lt --port 3000 --subdomain beauber",
-    "share": "npm-run-all --parallel open:src localtunnel"
+    "share": "npm-run-all --parallel open:src localtunnel",
+    "lint": "esw webpack.config.* src buildScripts --color",
+    "lint:watch": "npm run lint -- --watch"
   },
   "author": "Reece Boyd",
   "license": "MIT",

@@ -18,3 +18,6 @@ Transpilation from ES6 to ES5 code supported most by most browsers is possible d
 
 ### Bundling
 This project uses [Webpack](https://webpack.js.org/) for bundling. You can view the configuration for Webpack in this project via [webpack.config.dev.js](https://github.com/reecealanboyd/beauber.js/blob/master/webpack.config.dev.js).
+
+### Linting
+This project enforces consistency and avoids mistakes via [ESLint](https://eslint.org/). You can view the configuration for ESLint in this project via [.eslintrc.json](https://github.com/reecealanboyd/beauber.js/blob/master/.eslintrc.json). Linting is run in parallel with `npm start` and it is configured to watch for changes to any files.
