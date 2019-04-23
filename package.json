@@ -4,7 +4,7 @@
   "description": "A JavaScript development environment with sensible configurations which when used may result in increased automation and developer happiness",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
-    "start": "npm-run-all --parallel open:src lint:watch test:watch",
+    "start": "npm-run-all --parallel open:src lint:watch test:watch start-mockapi",
     "open:src": "babel-node buildScripts/srcServer.js",
     "localtunnel": "lt --port 3000 --subdomain beauber",
     "share": "npm-run-all --parallel open:src localtunnel",
@@ -12,7 +12,10 @@
     "lint:watch": "npm run lint -- --watch",
     "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
     "test:watch" : "npm test -- --watch",
-    "generate-mock-data": "babel-node buildScripts/generateMockData"
+    "generate-mock-data": "babel-node buildScripts/generateMockData",
+    "prestart-mockapi": "npm run generate-mock-data",
+    "start-mockapi": "json-server --watch src/api/db.json --port 3001"
+
   },
   "author": "Reece Boyd",
   "license": "MIT",
